@@ -64,6 +64,14 @@ namespace OrderTracker.Tests
       CollectionAssert.AreEqual(newList, result);
     }
 
-  
+    [TestMethod]
+    public void Find_RetriveVendorFromListById_Vendor()
+    {
+      Vendor newVendor = new Vendor("Local Coffee", "Serves local coffee");
+      Vendor newVendor2 = new Vendor("Localized Coffee", "Serves localized coffee");
+      Vendor newVendor3 = new Vendor("Localish Coffee", "Serves localish coffee");
+      Vendor result = Vendor.Find(1);
+      Assert.AreEqual(newVendor, result);
+    }
   }
 }
