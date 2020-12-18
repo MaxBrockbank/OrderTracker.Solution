@@ -29,6 +29,15 @@ namespace OrderTracker.Tests
       List<string> stringresult = new List<string>{};
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void Find_RetrieveOrderFromListById_Order()
+    {
+      Order newOrder = new Order("The Usual", "Local Coffee's usual order of day old croissant and Marionberry Danishes.", 100, "1/1/2020");
+      Order newOrder2 = new Order("The Unusual", "Something different", 101, "1/2/2020");
+      Order newOrder3 = new Order("The Usual", "Something else different", 102, "1/3/2020");
+      Order result = Order.Find(2);
+      Assert.AreEqual(newOrder2, result);
+    }
   }
 
   [TestClass]
@@ -54,5 +63,7 @@ namespace OrderTracker.Tests
       List<string> testList = new List<string>{};
       CollectionAssert.AreEqual(newList, result);
     }
+
+  
   }
 }

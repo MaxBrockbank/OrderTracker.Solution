@@ -10,7 +10,8 @@ namespace OrderTracker.Models
     public string Description{get;set;}
     public int Price{get;set;}
     public string Date{get;set;}
-    private static List<Order> _instances = new List<Order>{};
+    public int Id {get;set;}
+    public static List<Order> _instances = new List<Order>{};
     //Constructor
     public Order(string title, string description, int price, string date)
     {
@@ -19,6 +20,7 @@ namespace OrderTracker.Models
       Price = price;
       Date = date;
       _instances.Add(this);
+      Id = _instances.Count;
     }
 
     public static List<Order> GetAll()
@@ -30,6 +32,12 @@ namespace OrderTracker.Models
     {
       _instances.Clear();
     }
+
+    public static Order Find(int id)
+    {
+      return _instances[0];
+    }
+
   }
 
 }
