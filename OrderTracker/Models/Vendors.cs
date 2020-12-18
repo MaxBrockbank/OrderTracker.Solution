@@ -29,7 +29,7 @@ namespace OrderTracker.Models
 
     public static Vendor Find(int id)
     {
-      return _instances[1];
+      return _instances[id-1];
     }
   }
 }
