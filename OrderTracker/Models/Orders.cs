@@ -1,10 +1,10 @@
 using System;
-using System.Collectios.Generic;
+using System.Collections.Generic;
 
 namespace OrderTracker.Models
 {
   public class Order
   {
-    
+
   }
 }
