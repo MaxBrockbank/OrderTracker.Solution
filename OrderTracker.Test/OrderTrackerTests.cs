@@ -5,12 +5,16 @@ using OrderTracker.Models;
 
 namespace OrderTracker.Tests
 {
-  // [TestClass]
-  // public class OrderTests
-  // {
-  //   [TestMethod]
-
-  // }
+  [TestClass]
+  public class OrderTests
+  {
+    [TestMethod]
+    public void OrderConstructor_CreateNewInstanceOfOrder_Order()
+    {
+      Order newOrder = new Order("The Usual", "Local Coffee's usual order of day old croissant and Marionberry Danishes.");
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
+  }
 
   [TestClass]
   public class VendorTests
