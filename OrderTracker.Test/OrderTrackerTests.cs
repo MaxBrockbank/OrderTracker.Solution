@@ -14,6 +14,12 @@ namespace OrderTracker.Tests
       Order newOrder = new Order("The Usual", "Local Coffee's usual order of day old croissant and Marionberry Danishes.", 100, "1/1/2020");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
+    [TestMethod]
+    public void GetAll_RetriveStaticListOfAllOrderInstances_List()
+    {
+        Order newOrder = new Order("The Usual", "Local Coffee's usual order of day old croissant and Marionberry Danishes.", 100, "1/1/2020");
+        Assert.AreEqual(typeof(List<Order>), Order.GetAll());
+    }
   }
 
   [TestClass]
