@@ -11,7 +11,7 @@ namespace OrderTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreateNewInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("The Usual", "Local Coffee's usual order of day old croissant and Marionberry Danishes.");
+      Order newOrder = new Order("The Usual", "Local Coffee's usual order of day old croissant and Marionberry Danishes.", 100, "1/1/2020");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
   }
