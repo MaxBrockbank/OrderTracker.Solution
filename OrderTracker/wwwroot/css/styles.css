@@ -1,0 +1,29 @@
+.center-text{
+  text-align: center;
+}
+.inline-link{
+  display: inline;
+  padding: 20px;
+  
+}
+.no-decor{
+  text-decoration: none;
+}
+.links{
+  text-align: center;
+}
+
+#page-center{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#box{
+  width: 35%;
+  margin: 0 auto;
+}
+
+#box button, input, label{
+  margin-top: 20px;
+}
