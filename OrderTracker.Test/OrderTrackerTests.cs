@@ -52,7 +52,7 @@ namespace OrderTracker.Tests
       List<Vendor> result = Vendor.GetAll();
       List<Vendor> newList = new List<Vendor> {newVendor};
       List<string> testList = new List<string>{};
-      CollectionAssert.AreEqual(testList, result);
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
