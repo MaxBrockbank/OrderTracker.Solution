@@ -73,5 +73,16 @@ namespace OrderTracker.Tests
       Vendor result = Vendor.Find(1);
       Assert.AreEqual(newVendor, result);
     }
+
+    [TestMethod]
+    public void AddOrder_AddAnOrderObjectToVendorOrderList_OrderList()
+    {
+      Order newOrder = new Order("The Usual", "Local Coffee's usual order of day old croissant and Marionberry Danishes.", 100, "1/1/2020");
+      List<Order> newList = new List<Order>{newOrder};
+      Vendor newVendor = new Vendor("Local Coffee", "Serves local coffee");
+      newVendor.AddOrder(newOrder);
+      List<Order> result = newVendor.Orders;
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
