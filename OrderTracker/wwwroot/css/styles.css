@@ -27,3 +27,7 @@
 #box button, input, label{
   margin-top: 20px;
 }
+
+.full{
+  width: 100%;
+}

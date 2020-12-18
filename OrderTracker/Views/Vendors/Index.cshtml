@@ -15,13 +15,13 @@
   }
   else
   {
-    <h1>Here are all your vendors</h1>
-    <ol>
+    <h1>Your vendors:</h1>
+    <ul>
       @foreach(Vendor vendor in Model)
       {
-        <li>@vendor.Name</li>
+        <li><a href="/vendor/@vendor.Id">@vendor.Name</a></li>
       }
-    </ol>
+    </ul>
   }
 
   

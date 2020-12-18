@@ -1,0 +1,18 @@
+@using OrderTracker.Models;
+@{
+  Layout = "_Layout";
+}
+<div class="container">
+  <h3>@Model["vendor"].Name</h3>
+  @if(@Model["orders"].Count == 0)
+  {
+    <h5>No orders right now</h5>
+  }
+  else
+  {
+    foreach(Order order in @Model["orders"])
+    {
+      <h5><a href="">@order.Title</a></h5>
+    }
+  }
+</div>
