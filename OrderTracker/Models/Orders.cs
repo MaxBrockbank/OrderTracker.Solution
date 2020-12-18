@@ -35,7 +35,7 @@ namespace OrderTracker.Models
 
     public static Order Find(int id)
     {
-      return _instances[0];
+      return _instances[id-1];
     }
 
   }
