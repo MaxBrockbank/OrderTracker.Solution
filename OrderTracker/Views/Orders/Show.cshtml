@@ -1,0 +1,20 @@
+@using OrderTracker.Models;
+@{
+  Layout ="_Layout";
+}
+
+
+<div class="links">
+  <h4 class="inline-link"><a href="/" class="no-decor">Back to Home</a></h4>
+  <h4 class="inline-link"><a href=/vendor/@Model["vendor"].Id class="no-decor">Back to @Model["vendor"].Name</a></h4>
+  <h4 class="inline-link"><a href="/vendor" class="no-decor">Back to All Vendors</a></h4>
+</div>
+<div class="container" id="page-center">
+  <div id="box">
+
+    <h4>Title: @Model["order"].Title</h4>
+    <h4>Description: @Model["order"].Description</h4>
+    <h4>Price: $@Model["order"].Price</h4>
+    <h4>Date: @Model["order"].Date</h4>
+  </div>
+</div>

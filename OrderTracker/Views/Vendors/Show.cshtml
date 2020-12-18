@@ -2,6 +2,11 @@
 @{
   Layout = "_Layout";
 }
+<div class="links">
+  <h4 class="inline-link"><a href="/" class="no-decor">Back to Home</a></h4>
+  <h4 class="inline-link"><a href="/vendor" class="no-decor">Back to Vendors</a></h4>
+  <h4 class="inline-link"><a href='/vendor/@Model["vendor"].Id/order/new' class="no-decor">Add New Order</a></h4>
+</div>
 <div class="container">
   <h3>@Model["vendor"].Name</h3>
   @if(@Model["orders"].Count == 0)
@@ -12,7 +17,7 @@
   {
     foreach(Order order in @Model["orders"])
     {
-      <h5><a href="">@Model["orders"].Title</a></h5>
+      <h5><a href='/vendor/@Model["vendor"].Id/order/@order.Id'>@order.Title</a></h5>
     }
   }
 </div>
