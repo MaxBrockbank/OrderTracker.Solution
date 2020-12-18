@@ -21,7 +21,7 @@ namespace OrderTracker.Tests
     }
 
     [TestMethod]
-    public void GetAll_RetriveStaticListOfAllOrderInstances_OrderList()
+    public void GetAll_RetreiveStaticListOfAllOrderInstances_OrderList()
     {
       Order newOrder = new Order("The Usual", "Local Coffee's usual order of day old croissant and Marionberry Danishes.", 100, "1/1/2020");
       List<Order> newList = new List<Order> {newOrder};
@@ -32,13 +32,27 @@ namespace OrderTracker.Tests
   }
 
   [TestClass]
-  public class VendorTests
+  public class VendorTests : IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
     [TestMethod]
     public void VendorConstructor_CreateNewInstanceOfVendor_Vendor()
     {
       Vendor newVendor = new Vendor("Local Coffee", "Serves local coffee");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
+    }
+
+    [TestMethod]
+    public void GetAll_RetreiveStaticListOfAllVendors_VendorList()
+    {
+      Vendor newVendor = new Vendor("Local Coffee", "Serves local coffee");
+      List<Vendor> result = Vendor.GetAll();
+      List<Vendor> newList = new List<Vendor> {newVendor};
+      List<string> testList = new List<string>{};
+      CollectionAssert.AreEqual(testList, result);
     }
   }
 }
