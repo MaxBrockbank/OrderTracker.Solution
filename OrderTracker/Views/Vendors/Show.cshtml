@@ -7,17 +7,21 @@
   <h4 class="inline-link"><a href="/vendor" class="no-decor">Back to Vendors</a></h4>
   <h4 class="inline-link"><a href='/vendor/@Model["vendor"].Id/order/new' class="no-decor">Add New Order</a></h4>
 </div>
-<div class="container">
-  <h3>@Model["vendor"].Name</h3>
-  @if(@Model["orders"].Count == 0)
-  {
-    <h5>No orders right now</h5>
-  }
-  else
-  {
-    foreach(Order order in @Model["orders"])
+<div class="container" id="page-center">
+  <div id="box">
+
+    <h3>@Model["vendor"].Name</h3>
+    @if(@Model["orders"].Count == 0)
     {
-      <h5><a href='/vendor/@Model["vendor"].Id/order/@order.Id'>@order.Title</a></h5>
+      <h5>No orders right now</h5>
     }
-  }
+    else
+    {
+      @foreach(Order order in @Model["orders"])
+      {
+        <h5><a href='/vendor/@Model["vendor"].Id/order/@order.Id'>@order.Title</a></h5>
+      }
+    }
+
+  </div>
 </div>
