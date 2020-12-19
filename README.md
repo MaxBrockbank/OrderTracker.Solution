@@ -26,7 +26,8 @@ A web application made in C# used to track for our fictional character Pierre to
 * MSTest
 
 ## Known Bugs
-
+* UI not accessile or intuitive
+* User cannot remove a Vendor or an order from a vendor (yet)
 
 ## Legal
 * Copyright © 2020 Max Brockbank
