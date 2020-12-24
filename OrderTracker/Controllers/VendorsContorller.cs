@@ -7,20 +7,20 @@ namespace OrderTracker.Controllers
 {
   public class VendorsController : Controller
   {
-    [HttpGet ("/vendor")]
+    [HttpGet ("/vendors")]
     public ActionResult Index()
     {
       List<Vendor> vendorList = Vendor.GetAll();
       return View(vendorList);
     }
 
-    [HttpGet ("/vendor/new")]
+    [HttpGet ("/vendors/new")]
     public ActionResult New()
     {
       return View();
     }
 
-    [HttpGet("/vendor/{id}")]
+    [HttpGet("/vendors/{id}")]
     public ActionResult Show(int id)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
@@ -31,7 +31,7 @@ namespace OrderTracker.Controllers
       return View(model);
     }
 
-    [HttpPost ("/vendor/{vendorId}/order")]
+    [HttpPost ("/vendors/{vendorId}/order")]
     public ActionResult Create (int vendorId, string title, string description, int price, string date)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();

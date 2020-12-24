@@ -7,7 +7,7 @@
 <div class="container">
 <div class="links">
   <h4 class="inline-link"><a href="/" class="no-decor">Back to Home</a></h4>
-  <h4 class="inline-link"><a href="/vendor/new" class="no-decor">Add New Vendor</a></h4>
+  <h4 class="inline-link"><a href="/vendors/new" class="no-decor">Add New Vendor</a></h4>
 </div>
 <div class="container" id="page-center">
   <div id="box">
@@ -21,7 +21,7 @@
     <ul>
       @foreach(Vendor vendor in Model)
       {
-        <li><a href="/vendor/@vendor.Id">@vendor.Name</a></li>
+        <li><a href="/vendors/@vendor.Id">@vendor.Name</a></li>
       }
     </ul>
   }

@@ -25,6 +25,28 @@ A web application made in C# used to track for our fictional character Pierre to
 * C# / .NET
 * MSTest
 
+## Specs
+<details>
+
+<summary> Checkout Specs</summary>
+
+| Test  | Input | Output  |
+| :--- | :---: |  :---:  |
+
+Order Tests
+
+|Test the Order Constructor by making sure it is of type Order| "one string", "two strings"| new Order object|
+|Test the GetAll method that it can retrieve a static list of all of the Order objects| | List of Order objects|
+|Test the Find method that it can retrieve a specific Order object given an integer of its ID| 3 | the 4th Order object made|
+
+Vendor Tests
+|Test the Vendor constructor by making sure it is of type Vendor| "one string", "two strings"| new Vendor object|
+|Test the GetAll method that it can retrieve a static list of all the Vendor objects| | List of Vendor objects|
+|Test the Find method that it can retrieve a specific vendor object given an integer of its ID| 3 | the 4th Vendor object created|
+|Test that the AddOrder method can add an Order object to Orders list when passed an Order object| Order object| vendorObject.Orders has new Order object in it |
+</details>
+
+
 ## Known Bugs
 * UI not accessile or intuitive
 * User cannot remove a Vendor or an order from a vendor (yet)
