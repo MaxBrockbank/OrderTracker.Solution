@@ -31,7 +31,7 @@ namespace OrderTracker.Controllers
       return View(model);
     }
 
-    [HttpPost ("/vendors/{vendorId}/order")]
+    [HttpPost ("/vendors/{vendorId}/orders")]
     public ActionResult Create (int vendorId, string title, string description, int price, string date)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
